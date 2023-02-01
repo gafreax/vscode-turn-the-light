@@ -3,6 +3,8 @@
   "displayName": "turn-the-light",
   "description": "Simple extension to switch to light theme and back",
   "version": "0.0.1",
+  "repository": "https://github.com/gafreax/vscode-turn-the-light",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.74.3"
   },
