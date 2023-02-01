@@ -11,7 +11,6 @@ function activate(context) {
     toggleButton.show();
     
 
-    
 
     // Register the toggle command
     let disposable = vscode.commands.registerCommand('turn-the-light.switch', function () {
@@ -32,7 +31,7 @@ function activate(context) {
     });
 
     // Add the disposable to the context
-    context.subscriptions.push(disposable);
+    context.subscriptions.push(disposable, toggleButton);
 }
 
 // Deactivate the extension
