@@ -2,8 +2,12 @@
   "name": "turn-the-light",
   "displayName": "turn-the-light",
   "description": "Simple extension to switch to light theme and back",
-  "version": "0.0.1",
-  "repository": "https://github.com/gafreax/vscode-turn-the-light",
+  "version": "0.0.3",
+  "publisher": "gafreax",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gafreax/vscode-turn-the-light"
+  },
   "license": "MIT",
   "engines": {
     "vscode": "^1.74.3"
@@ -12,14 +16,17 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:turn-the-light.switch"
+    "*"
   ],
   "main": "./extension.js",
+  
   "contributes": {
-    "commands": [{
-      "command": "turn-the-light.switch",
-      "title": "Turn the light"
-    }]
+    "commands": [
+      {
+        "command": "turn-the-light.switch",
+        "title": "Turn the light"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
