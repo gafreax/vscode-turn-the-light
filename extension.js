@@ -10,7 +10,7 @@ function activate(context) {
     toggleButton.tooltip = 'Toggle Theme';
     toggleButton.show();
     
-
+    context.subscriptions.push(toggleButton);
 
     // Register the toggle command
     let disposable = vscode.commands.registerCommand('turn-the-light.switch', function () {
@@ -31,7 +31,7 @@ function activate(context) {
     });
 
     // Add the disposable to the context
-    context.subscriptions.push(disposable, toggleButton);
+    context.subscriptions.push(disposable);
 }
 
 // Deactivate the extension
